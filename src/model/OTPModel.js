@@ -6,6 +6,6 @@ const DatabaseSchema = mongoose.Schema({
     status:{type:String, require:true}
 },{timeStamp:true, versionKey:false});
 
-const UsersModel = mongoose.model('users', DatabaseSchema)
+const OTPModel = mongoose.model('users', DatabaseSchema)
 
-module.exports = UsersModel;
+module.exports = OTPModel;
