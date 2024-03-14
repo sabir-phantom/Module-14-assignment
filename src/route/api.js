@@ -7,8 +7,20 @@ const { createTodo, selectTodo, updateTodo, statusUpdateTodo, deleteTodo } = req
 
 const router = express.Router();
 
+// routing
+router.post('/createProfile' , createProfile)
 
+// user routing
+router.post('/userLogin', userLogin)
+router.get('/selectProfile', AuthMiddleware , selectProfile)
+router.post('/profileUpdate' , AuthMiddleware , profileUpdate)
 
+// todo_routing
+router.post('/createTodo' , AuthMiddleware , createTodo)
+router.get('/selectTodo' , AuthMiddleware , selectTodo)
+router.post('/updateTodo' ,AuthMiddleware , updateTodo )
+router.post('/statusUpdateTodo' ,AuthMiddleware , statusUpdateTodo )
+router.get('/deleteTodo' ,AuthMiddleware , deleteTodo )
 
 
 
