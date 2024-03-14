@@ -1,7 +1,7 @@
 const express = require('express');
 const {   createProfile, userLogin, selectProfile, profileUpdate } = require('../controller/userController');
-const AuthMiddleware = require('../middleware/AuthMiddleware');
-const { createTodo, selectTodo, updateTodo, statusUpdateTodo, deleteTodo } = require('../controller/TodoController');
+const AuthMiddleware = require('../middlerware/AuthMiddleware');
+const { createTodo, selectTodo, updateTodo, statusUpdateTodo, deleteTodo } = require('../controller/TaskController');
 
 
 
