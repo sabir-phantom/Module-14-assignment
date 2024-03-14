@@ -1,11 +1,14 @@
 const mongoose = require('mongoose');
 
 const DatabaseSchema = mongoose.Schema({
-    title:{type:String, unique:true, require:true},
-    description:{type:String, require:true},
-    status:{type:String, require:true},
+    UserName:{type:String},
+    TodoSubject:{type:String},
+    TodoDescription:{type:String},
+    TodoStatus:{type:String},
+    TodoCreateDate:{type:Date},
+    TodoUpdateDate:{type:Date},
 },{timeStamp:true,versionKey:false});
 
-const UsersMOdel = mongoose.model('users', DatabaseSchema)
+const TasksModel = mongoose.model('tasks', DatabaseSchema)
 
-module.exports = UsersMOdel;
+module.exports = TasksModel;
